@@ -1,0 +1,43 @@
+.add_form
+{
+    padding: 40px;
+    width: 100%;
+    display: block;
+    align-items: center;
+    justify-content: center;
+    background-color: blanchedalmond;
+}
+.label_form
+{
+    margin: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;    
+}
+.input_name
+{
+    margin-left: 46px;
+}
+.input_number
+{
+    margin-left: 30px;
+}
+.input_name, .input_number
+{
+    padding-left: 10px;
+    width: 300px;
+    height: 30px;    
+}
+.block
+{
+    display: flex;
+    justify-content: center;
+}
+.button_form
+{
+    margin-top: 20px;
+    width: 150px;
+    height: 40px;
+    cursor: pointer;
+    font-size: large;
+}
