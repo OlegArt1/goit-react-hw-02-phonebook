@@ -1,16 +1,35 @@
-.form
+.filter__form
 {
-    padding: 40px;
+    padding: 50px;
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: bisque;
+    background-color: rgb(71, 70, 70);
+    /* background-color: bisque; */
 }
-.input_filter
+.filter__input
 {
-    margin-left: 20px;
+    margin-left: 18px;
     padding-left: 10px;
     width: 300px;
     height: 30px;
+    border: 3px solid lightsalmon;
+    background-color: lightcyan;
+}
+@media screen and (max-width: 720px)
+{
+    .filter__input
+    {
+        width: 280px;
+        height: 28px;
+    }
+}
+@media screen and (max-width: 620px)
+{
+    .filter__input
+    {
+        width: 250px;
+        height: 25px;
+    }
 }

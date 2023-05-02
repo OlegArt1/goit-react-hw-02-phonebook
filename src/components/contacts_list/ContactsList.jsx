@@ -2,26 +2,24 @@ import PropTypes from 'prop-types';
 import Css from "./ContactsList.module.css";
 import { nanoid } from 'nanoid';
 
-export const ContactList = ({contacts, delete_contact}) =>
+export const ContactList = ({ contacts, delete_contact }) =>
 {
     const ListId = nanoid();
 
     return (
-        <ul className={Css.list}>
-            {contacts.map(contact =>
-            {
+        <ul className={Css.contact__list}>
+            {contacts.map(contact => {
                 return (
-                    <li className={Css.item}>
-                            <label className={Css.label} htmlFor={ListId}>
-                                <b>Name:&nbsp;&nbsp;&nbsp;</b>
-                                <span id={ListId}>{contact.name};</span>
-                            </label>
-                            <label className={Css.label} htmlFor={ListId}>
-                                <b>Phone:&nbsp;&nbsp;&nbsp;</b>
-                                <span id={ListId}>{contact.number};</span>
-                            </label>
-                            <button id={contact.id} className={Css.button} type="button" onClick={delete_contact}>remove</button>
-                        <br/><br/><br/>
+                    <li className={Css.contact__item}>
+                        <label className={Css.contact__label} htmlFor={ListId}>
+                            <b>Name:&nbsp;&nbsp;&nbsp;</b>
+                             <span id={ListId} style={{ color: 'lightgreen' }}>{contact.name};</span>
+                        </label>
+                        <label className={Css.contact__label} htmlFor={ListId}>
+                            <b>Phone:&nbsp;&nbsp;&nbsp;</b>
+                            <span id={ListId} style={{ color: 'lightseagreen' }}>{contact.number};</span>
+                        </label>
+                        <button id={contact.id} className={Css.contact__button_close} type="button" onClick={delete_contact}>X</button>
                     </li>
                 );
             })}
@@ -30,6 +28,6 @@ export const ContactList = ({contacts, delete_contact}) =>
 }
 ContactList.prototype =
 {
-    contacts: PropTypes.func.isRequired,
-    delete_contact: PropTypes.func.isRequired
+    contacts: PropTypes.string.isRequired,
+    delete_contact: PropTypes.func.isRequired,
 };
